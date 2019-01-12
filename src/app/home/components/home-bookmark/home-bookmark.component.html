@@ -1,0 +1,18 @@
+<div class="heading">
+    <div class="history fa fa-bars">
+        Bookmark History
+    </div>
+</div>
+<div class="middle-area">
+    <div class="scroller">
+        <div class="bookmark" *ngFor="let bookMark of bookMarks">
+            <div class="name">{{bookMark.word}}</div>
+            <div class="remove" (click)="removeBookMark(bookMark)">-</div>
+        </div>
+    </div>
+</div>
+<div class="trash-area">
+    <div class="trash">
+        <span class="fa fa-trash" (click)="clearBookMarks()">Clear Bookmarks</span>
+    </div>
+</div>

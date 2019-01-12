@@ -1,0 +1,31 @@
+<div class="index-area">
+    <span (click)="getIndexedData(alphabet)" [ngClass]="{'selected':selectedIndex==alphabet}" *ngFor="let alphabet of alphabets">{{alphabet.toUpperCase()}}</span>
+</div>
+<div class="middle-area">
+    <div class="filter-section">
+        <form class="search-container">
+            <input type="text" placeholder="Search.." name="search" [(ngModel)]="searchValue">
+            <button type="submit" (click)="getSearchData()"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+<div class="list-area">
+    <div class="table">
+        <div class="table-head">
+            <div class="table-row">
+                <div class="word">Word</div>
+                <div class="description">Description</div>
+                <div class="add-bookmark"></div>
+            </div>
+        </div>
+        <div class="table-body">
+            <div class="scroller">
+                <div class="table-row" *ngFor="let data of filteredList">
+                    <div class="word">{{data.word}}</div>
+                    <div class="description">{{data.description}}</div>
+                    <div class="add-bookmark" (click)="addBookMark(data)">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

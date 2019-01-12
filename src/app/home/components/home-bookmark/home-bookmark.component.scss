@@ -1,0 +1,55 @@
+.heading{
+    height: 44px;
+    padding-left: 24px;
+    .history{
+        padding: 10px 10px 10px 0;
+    }
+}
+.middle-area{
+    height: calc(100% - 94px);
+    margin: 0 24px;
+    border: 1px solid #ccc;
+    .scroller{
+        height: 100%;
+        overflow: auto;
+        .bookmark{
+            height: 40px;
+            border-bottom: 2px solid #ccc;
+            background: #fff;
+            .name{
+                float: left;
+                width:90%;
+                height: 40px;
+                padding: 0 10px;
+            }
+            .remove{
+                float: left;
+                width:10%;
+                height: 40px;
+                text-align: center;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+        .bookmark:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.trash-area{
+    height: 50px;
+    padding: 0 24px;
+    .trash{
+        height: 30px;
+        width: 100%;
+        margin: 10px 0;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        span{
+            height: 20px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    }
+}
